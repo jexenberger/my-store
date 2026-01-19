@@ -35,8 +35,8 @@ public class DefaultSurroundingStoreService implements SurroundingStoreService {
     }
 
 
-    private Result<List<SurroundingStoreDTO>, Failure> runLookup(Result<LatLongPosition, Failure> geoService, int limit) {
-        return geoService
+    private Result<List<SurroundingStoreDTO>, Failure> runLookup(Result<LatLongPosition, Failure> location, int limit) {
+        return location
                 .mapOk(pos -> jsonStoreRepository.findClosest(pos, limit))
                 .mapOk(stores -> stores.map(it -> {
                     var distance = it.left();
