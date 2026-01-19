@@ -40,6 +40,7 @@ The longitude and latitude of the postal code are resolved using the [PDOK](http
 - Selection of APIs was driven by two factors: They must be free and must be able to operate without the need for an API key thereby complicating the process of running this application
 - The general coding approach was to utilize Monads as a general way of handling methods with complex outputs, usually where the method needs to return something or nothing or where there is a success state or error state
 - As a challenge the entire applicatin has been coded without a single if statement
+- SSL validation was disabled in order to simplify the running of the app so that certificate stores do not need to be configured by the end-user
 
 
 ## Architecturally significant components
