@@ -37,9 +37,12 @@ The longitude and latitude of the postal code are resolved using the [PDOK](http
 ## Major Architectural decisions
 - Java 21 was selected as this is the latest version that is well support for the frameworks in question
 - Spring Boot was selected due to it's de-facto nature and that it is therefore well understood in the general community
+- Onion Architecture was selected as the software architecture for the application
 - Selection of APIs was driven by two factors: They must be free and must be able to operate without the need for an API key thereby complicating the process of running this application
 - The general coding approach was to utilize Monads as a general way of handling methods with complex outputs, usually where the method needs to return something or nothing or where there is a success state or error state
 - As a challenge the entire applicatin has been coded without a single if statement
+- SSL validation was disabled in order to simplify the running of the app so that certificate stores do not need to be configured by the end-user
+- Caching is a low hanging fruit performance enhancement given the static nature of the application data
 
 
 ## Architecturally significant components
