@@ -1,10 +1,24 @@
 # Jumbo MyStore Application
 ## Features
-| Feature | Description|
-|---------|------------|
-|Find By System Location| Resolves the closest stores based on the location of the system|
-|Find By Address| Resolves the closest stores based on a given Postal Code and House number|
-|Find By Location| Resolves the closes stores based on a given latitude and longitude|
+| Feature | Description|API Endpoint|
+|---------|------------|------------|
+|Find By System Location| Resolves the closest stores based on the location of the system|`/store-locations/system`|
+|Find By Address| Resolves the closest stores based on a given Postal Code and House number|`/store-locations/{postalcode}/{houseNumber}`|
+|Find By Location| Resolves the closes stores based on a given latitude and longitude|`/store-locations/{longitude},{latitude}`|
+
+## Setup and Operation
+### Prerequisites
+- Java 21 SDK installed
+- Maven installed
+- Code installed and checkedout via GIT
+### Running
+To run the code you need to do the following steps
+1. Open the terminal in the location that the code was checked out into
+2. Run the following command: `mvn spring-boot:run`
+
+### Calling Service Endpoints
+MyStore comes with swagger installed, to access swagger-ui open a browser and navigate to `http://localhost:8080/swagger-ui/index.html`
+
 
 ## Notes on Implementation
 ### How System location is determined
