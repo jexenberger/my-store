@@ -15,7 +15,6 @@ public class CacheConfig {
     public CacheManager cacheManager() {
         var simpleCacheManager = new SimpleCacheManager();
         simpleCacheManager.setCaches(List.of(
-                new ConcurrentMapCache("system"),
                 new ConcurrentMapCache("address"),
                 new ConcurrentMapCache("latLong"))
         );

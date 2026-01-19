@@ -29,7 +29,6 @@ public class DefaultSurroundingStoreService implements SurroundingStoreService {
     }
 
     @Override
-    @Cacheable("system")
     public Result<List<SurroundingStoreDTO>, Failure> findBySystemLocation(int max) {
         return runLookup(geoService.getSystemLocation(), max);
 
