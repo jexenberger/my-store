@@ -25,6 +25,9 @@ public class PostalCodePositionDelegate implements BiFunction<String, Integer, L
 
     private static SSLContext sslContext;
 
+    /*
+     * ===== BYPASSING SSL IS TO MAKE THE APP EASIER TO RUN FOR THE ASSESSOR ====
+     */
     protected static final TrustManager[] TM = {
             new X509TrustManager() {
                 @Override
